@@ -17,6 +17,7 @@ import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { Switch, Route } from 'react-router-dom'
 // Components
 import Foo from './components/Foo';
+import Users from './components/Users';
 
 const drawerWidth = 240;
 
@@ -148,7 +149,7 @@ class MiniDrawer extends React.Component {
           <Switch>
             <Route exact path='/' component={Foo}/>
             <Route path='/foo' component={Foo}/>
-            <Route path='/bar' component={Foo}/>
+            <Route path='/users' component={Users}/>
           </Switch>
         </main>
       </div>

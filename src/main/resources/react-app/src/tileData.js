@@ -27,12 +27,12 @@ export const mailFolderListItems = (
         <ListItemText primary="Foo Menu" />
       </ListItem>
     </Link>
-    <Link to='/bar'>
+    <Link to='/users'>
       <ListItem button>
         <ListItemIcon>
           <StorageIcon />
         </ListItemIcon>
-        <ListItemText primary="Bar Menu" />
+        <ListItemText primary="Users" />
       </ListItem>
     </Link>
     <Link to='/misc'>

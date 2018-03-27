@@ -1,36 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Typography from 'material-ui/Typography';
-import Input from 'material-ui/Input';
-import { MenuItem } from 'material-ui/Menu';
-import ArrowDropDownIcon from 'material-ui-icons/ArrowDropDown';
-import CancelIcon from 'material-ui-icons/Cancel';
-import ArrowDropUpIcon from 'material-ui-icons/ArrowDropUp';
-import ClearIcon from 'material-ui-icons/Clear';
-import Chip from 'material-ui/Chip';
-import Select from 'react-select';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import Icon from 'material-ui/Icon';
-import Switch from 'material-ui/Switch';
 import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper';
-import InfoIcon from 'material-ui-icons/Info';
-import IconButton from 'material-ui/IconButton';
 import Divider from 'material-ui/Divider';
-import FilterHdrIcon from 'material-ui-icons/FilterHdr';
 import List, { ListItem, ListItemText } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
-import ImageIcon from 'material-ui-icons/Image';
-
 import DoneAllIcon from 'material-ui-icons/DoneAll';
-
-import WorkIcon from 'material-ui-icons/Work';
-import BeachAccessIcon from 'material-ui-icons/BeachAccess';
-
-
-const ITEM_HEIGHT = 48;
 
 const styles = theme => ({
   root: {
@@ -68,17 +46,17 @@ const styles = theme => ({
   }
 });
 
-class Redis extends React.Component {
+class Foo extends React.Component {
   constructor(props) {
     super(props);
     this.state =  {
       command: '',
       history: [],
     };
-    this.runRedisCommand = this.runRedisCommand.bind(this);
+    this.runFooCommand = this.runFooCommand.bind(this);
   }
 
-  callApiRedis = async () => {
+  callApiFoo = async () => {
     const response = await fetch('/foo', {
       method: "GET"
     });
@@ -91,8 +69,8 @@ class Redis extends React.Component {
     this.setState({ 'command' : event.target.value });
   };
 
-  runRedisCommand = event => {
-    this.callApiRedis()
+  runFooCommand = event => {
+    this.callApiFoo()
         .then(res => {
           var newHistory = this.state.history;
           newHistory.push({
@@ -126,7 +104,7 @@ class Redis extends React.Component {
         </Grid>
 
         <Grid item xs={12} lg={8}> 
-            <Button className={classes.button} variant="raised" color="primary" onClick={this.runRedisCommand}>
+            <Button className={classes.button} variant="raised" color="primary" onClick={this.runFooCommand}>
             Run Command
             <Icon className={classes.rightIcon}>send </Icon>
             </Button>
@@ -154,8 +132,8 @@ class Redis extends React.Component {
   }
 }
 
-Redis.propTypes = {
+Foo.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Redis);
+export default withStyles(styles)(Foo);
