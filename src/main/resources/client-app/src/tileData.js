@@ -14,6 +14,7 @@ import ComputerIcon from 'material-ui-icons/Computer';
 import CloudCircleIcon from 'material-ui-icons/CloudCircle';
 import ListIcon from 'material-ui-icons/List';
 import ShowChartIcon from 'material-ui-icons/ShowChart';
+import CloudDoneIcon from 'material-ui-icons/CloudDone';
 
 import { Link } from 'react-router-dom'
 
@@ -27,20 +28,28 @@ export const mailFolderListItems = (
         <ListItemText primary="Foo Menu" />
       </ListItem>
     </Link>
-    <Link to='/users'>
+    <Link to='/grid'>
       <ListItem button>
         <ListItemIcon>
           <StorageIcon />
         </ListItemIcon>
-        <ListItemText primary="Users" />
+        <ListItemText primary="Grid" />
       </ListItem>
     </Link>
-    <Link to='/misc'>
+    <Link to='/forms'>
       <ListItem button>
         <ListItemIcon>
           <CloudCircleIcon />
         </ListItemIcon>
-        <ListItemText primary="Some other" />
+        <ListItemText primary="Forms" />
+      </ListItem>
+    </Link>
+    <Link to='/health'>
+      <ListItem button>
+        <ListItemIcon>
+          <CloudDoneIcon />
+        </ListItemIcon>
+        <ListItemText primary="Health" />
       </ListItem>
     </Link>
   </div>

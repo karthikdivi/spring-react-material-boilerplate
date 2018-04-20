@@ -13,6 +13,8 @@ import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import ChevronRightIcon from 'material-ui-icons/ChevronRight';
 import FilterHdrIcon from 'material-ui-icons/FilterHdr';
+import DashboardIcon from 'material-ui-icons/Dashboard';
+import TimelineIcon from 'material-ui-icons/Timeline';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { Switch, Route } from 'react-router-dom'
 // Components
@@ -138,7 +140,7 @@ class MiniDrawer extends React.Component {
               {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </IconButton>
           </div>
-          <Typography variant="display3" align="center">{'Foo'}  <FilterHdrIcon /> </Typography>
+          <Typography variant="display3" align="center">{'Foo'}  <TimelineIcon /> </Typography>
           <Divider />
           <List>{mailFolderListItems}</List>
           <Divider />
@@ -149,7 +151,8 @@ class MiniDrawer extends React.Component {
           <Switch>
             <Route exact path='/' component={Foo}/>
             <Route path='/foo' component={Foo}/>
-            <Route path='/users' component={Users}/>
+            <Route path='/grid' component={Users}/>
+            <Route path='/health' component={Foo}/>
           </Switch>
         </main>
       </div>
