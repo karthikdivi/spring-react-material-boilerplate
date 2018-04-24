@@ -15,6 +15,10 @@ import CloudCircleIcon from 'material-ui-icons/CloudCircle';
 import ListIcon from 'material-ui-icons/List';
 import ShowChartIcon from 'material-ui-icons/ShowChart';
 import CloudDoneIcon from 'material-ui-icons/CloudDone';
+import GridOnIcon from 'material-ui-icons/GridOn';
+import LibraryBooksIcon from 'material-ui-icons/LibraryBooks';
+import InsertChartIcon from 'material-ui-icons/InsertChart';
+import MoodIcon from 'material-ui-icons/Mood';
 
 import { Link } from 'react-router-dom'
 
@@ -23,15 +27,15 @@ export const mailFolderListItems = (
     <Link to='/'>
       <ListItem button>
         <ListItemIcon>
-          <InboxIcon />
+          <InsertChartIcon />
         </ListItemIcon>
-        <ListItemText primary="Foo Menu" />
+        <ListItemText primary="Charts" />
       </ListItem>
     </Link>
     <Link to='/grid'>
       <ListItem button>
         <ListItemIcon>
-          <StorageIcon />
+          <GridOnIcon />
         </ListItemIcon>
         <ListItemText primary="Grid" />
       </ListItem>
@@ -39,17 +43,17 @@ export const mailFolderListItems = (
     <Link to='/forms'>
       <ListItem button>
         <ListItemIcon>
-          <CloudCircleIcon />
+          <LibraryBooksIcon />
         </ListItemIcon>
         <ListItemText primary="Forms" />
       </ListItem>
     </Link>
-    <Link to='/health'>
+    <Link to='/misc'>
       <ListItem button>
         <ListItemIcon>
-          <CloudDoneIcon />
+          <MoodIcon />
         </ListItemIcon>
-        <ListItemText primary="Health" />
+        <ListItemText primary="Misc" />
       </ListItem>
     </Link>
   </div>

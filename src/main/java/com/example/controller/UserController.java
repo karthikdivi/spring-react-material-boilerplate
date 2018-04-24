@@ -6,23 +6,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/foo")
-public class FooController {
+@RequestMapping("/users")
+public class UserController {
 	Random random = new Random();
 
-	@RequestMapping
-	public Map<String, Object> foo() {
+	@RequestMapping("/{id}")
+	public Map<String, Object> getUserDetails(@PathVariable String id) {
 		Map<String, Object> foo = new HashMap<>();
+		foo.put("id", id);
 		foo.put("name", "foo");
 		foo.put("age", 24);
 		return foo;
 	}
 
-	@RequestMapping("/list")
+	@RequestMapping("")
 	public List<Map<String, Object>> fooList() {
 		List<Map<String, Object>> result = new ArrayList<>();
 		for (int i = 0; i < 200; i++) {
