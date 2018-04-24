@@ -37,4 +37,18 @@ public class UserController {
 		}
 		return result;
 	}
+	
+	@RequestMapping("/charts/pie")
+	public List<Map<String, Object>> usersPieChart() {
+		List<Map<String, Object>> result = new ArrayList<>();
+		Map<String, Object> maleRecord = new HashMap<>();
+		maleRecord.put("name", "Male");
+		maleRecord.put("value", 63);
+		result.add(maleRecord);
+		Map<String, Object> femaleRecord = new HashMap<>();
+		femaleRecord.put("name", "Female");
+		femaleRecord.put("value", 37);
+		result.add(femaleRecord);
+		return result;
+	}
 }

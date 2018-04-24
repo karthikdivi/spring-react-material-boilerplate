@@ -142,7 +142,7 @@ class MiniDrawer extends React.Component {
               {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </IconButton>
           </div>
-          <Typography variant="display3" align="center">{'Foo'}  <TimelineIcon /> </Typography>
+          <Typography variant="display3" align="center">{'Foo'}  <FilterHdrIcon /> </Typography>
           <Divider />
           <List>{mailFolderListItems}</List>
           <Divider />
@@ -164,8 +164,7 @@ class MiniDrawer extends React.Component {
 
 MiniDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-  data: PropTypes.object.data
+  theme: PropTypes.object.isRequired
 };
 
 export default withStyles(styles, { withTheme: true })(MiniDrawer);

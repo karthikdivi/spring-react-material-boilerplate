@@ -24,7 +24,7 @@ const styles = theme => ({
   }
 });
 
-class Users extends React.Component {
+class UsersForms extends React.Component {
 
   state = {
     columns: [
@@ -77,8 +77,8 @@ class Users extends React.Component {
   }
 }
 
-Users.propTypes = {
+UsersForms.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Users);
+export default withStyles(styles)(UsersForms);

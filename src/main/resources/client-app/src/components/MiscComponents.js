@@ -46,7 +46,7 @@ const styles = theme => ({
   }
 });
 
-class Foo extends React.Component {
+class MiscComponents extends React.Component {
   constructor(props) {
     super(props);
     this.state =  {
@@ -132,8 +132,8 @@ class Foo extends React.Component {
   }
 }
 
-Foo.propTypes = {
+MiscComponents.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Foo);
+export default withStyles(styles)(MiscComponents);
