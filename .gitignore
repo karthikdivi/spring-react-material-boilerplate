@@ -5,7 +5,10 @@
 
 .metadata
 bin/
+out/
 tmp/
+*.iml
+.idea/
 *.tmp
 *.bak
 *.swp
