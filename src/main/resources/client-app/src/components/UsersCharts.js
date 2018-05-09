@@ -6,7 +6,6 @@ import Grid from 'material-ui/Grid';
 import { LineChart, AreaChart, Area, BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Legend, PieChart, Pie, Sector, Cell, Tooltip,
           Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 import Typography from 'material-ui/Typography';
-import {Redirect} from 'react-router-dom';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];                   
 const data = [
@@ -142,19 +141,7 @@ class UsersCharts extends React.Component {
     }).catch(err => console.log(err));
   } 
 
-  isEmpty(map) {
-    for(var key in map) {
-      if (map.hasOwnProperty(key)) {
-         return false;
-      }
-    }
-    return true;
-  }
-
   render() {
-    if(this.isEmpty(JSON.parse(sessionStorage.userData))){
-      return (<Redirect to={'/'}/>)
-    }
     const { classes } = this.props;
     return (
       <div className={classes.root}>

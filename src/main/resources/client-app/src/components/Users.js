@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
-import {Redirect} from 'react-router-dom';
 
 import {
   FilteringState,
@@ -51,19 +50,7 @@ class Users extends React.Component {
     }).catch(err => console.log(err));
   } 
 
-  isEmpty(map) {
-    for(var key in map) {
-      if (map.hasOwnProperty(key)) {
-         return false;
-      }
-    }
-    return true;
-  }
-
   render() {
-    if(this.isEmpty(JSON.parse(sessionStorage.userData))){
-      return (<Redirect to={'/'}/>)
-    } 
     const { classes } = this.props;
     const { rows, columns } = this.state;
     return (
