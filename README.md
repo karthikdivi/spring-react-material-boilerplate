@@ -7,6 +7,11 @@ $ cd /src/main/resources/react-app
 $ npm build
 ```
 
+## Contributors
+
+* [Karthik Divi](https://karthikdivi.com/)
+* [Narasing](https://github.com/venkatnpedada)
+
 ## Screenshots
 #### Charts
 ![](images/Screen%20Shot%202018-04-25%20at%202.05.17%20AM.png)
