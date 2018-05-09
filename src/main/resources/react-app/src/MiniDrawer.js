@@ -13,13 +13,17 @@ import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import ChevronRightIcon from 'material-ui-icons/ChevronRight';
 import FilterHdrIcon from 'material-ui-icons/FilterHdr';
+import DashboardIcon from 'material-ui-icons/Dashboard';
+import TimelineIcon from 'material-ui-icons/Timeline';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { Switch, Route } from 'react-router-dom'
 // Components
 import Signin from './components/Signin';
 import Logout from './components/Logout';
-import Foo from './components/Foo';
+import MiscComponents from './components/MiscComponents';
 import Users from './components/Users';
+import UsersCharts from './components/UsersCharts';
+import UsersForms from './components/UsersForms';
 
 const drawerWidth = 240;
 
@@ -150,11 +154,11 @@ class MiniDrawer extends React.Component {
           <div className={classes.toolbar} />
           <Switch>
             <Route exact path='/' component={Signin}/>
-            <Route exact path='/home' component={Foo}/>
-            <Route path='/foo' component={Foo}/>
-            <Route path='/misc' component={Foo}/>
-            <Route path='/users' component={Users}/>
             <Route path='/logout' component={Logout}/>
+            <Route exact path='/' component={UsersCharts}/>
+            <Route path='/grid' component={Users}/>
+            <Route path='/forms' component={UsersForms}/>
+            <Route path='/misc' component={MiscComponents}/>
           </Switch>
         </main>
       </div>
@@ -164,8 +168,7 @@ class MiniDrawer extends React.Component {
 
 MiniDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-  data: PropTypes.object.data
+  theme: PropTypes.object.isRequired
 };
 
 export default withStyles(styles, { withTheme: true })(MiniDrawer);
