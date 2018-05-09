@@ -18,8 +18,6 @@ import TimelineIcon from 'material-ui-icons/Timeline';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { Switch, Route } from 'react-router-dom'
 // Components
-import Signin from './components/Signin';
-import Logout from './components/Logout';
 import MiscComponents from './components/MiscComponents';
 import Users from './components/Users';
 import UsersCharts from './components/UsersCharts';
@@ -153,8 +151,6 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Switch>
-            <Route exact path='/' component={Signin}/>
-            <Route path='/logout' component={Logout}/>
             <Route exact path='/' component={UsersCharts}/>
             <Route path='/grid' component={Users}/>
             <Route path='/forms' component={UsersForms}/>
