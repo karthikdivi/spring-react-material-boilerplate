@@ -11,7 +11,7 @@ import Dialog, {
 } from 'material-ui/Dialog';
 //import { Typography } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
-
+import {Redirect} from 'react-router-dom';
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -35,7 +35,19 @@ class AlertDialog extends React.Component {
     this.setState({ open: false });
   };
 
+  isEmpty(map) {
+    for(var key in map) {
+      if (map.hasOwnProperty(key)) {
+         return false;
+      }
+    }
+    return true;
+  }
+
   render() {
+    if(this.isEmpty(JSON.parse(sessionStorage.userData))){
+      return (<Redirect to={'/'}/>)
+    }
     const { classes } = this.props;
     return (
       <div>

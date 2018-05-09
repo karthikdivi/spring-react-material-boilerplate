@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import MenuItem from 'material-ui/Menu/MenuItem';
 import TextField from 'material-ui/TextField';
+import {Redirect} from 'react-router-dom';
 
 const styles = theme => ({
   container: {
@@ -52,7 +53,19 @@ class TextFields extends React.Component {
     });
   };
 
+  isEmpty(map) {
+    for(var key in map) {
+      if (map.hasOwnProperty(key)) {
+         return false;
+      }
+    }
+    return true;
+  }
+
   render() {
+    if(this.isEmpty(JSON.parse(sessionStorage.userData))){
+      return (<Redirect to={'/'}/>)
+    }
     const { classes } = this.props;
 
     return (
