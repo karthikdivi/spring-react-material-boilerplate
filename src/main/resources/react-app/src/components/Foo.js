@@ -9,6 +9,7 @@ import Divider from 'material-ui/Divider';
 import List, { ListItem, ListItemText } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import DoneAllIcon from 'material-ui-icons/DoneAll';
+import {Redirect} from 'react-router-dom';
 
 const styles = theme => ({
   root: {
@@ -81,7 +82,20 @@ class Foo extends React.Component {
         }).catch(err => console.log(err));
   };
 
+  isEmpty(map) {
+    for(var key in map) {
+      if (map.hasOwnProperty(key)) {
+         return false;
+      }
+    }
+    return true;
+ }
+
   render() {
+    const sesionUsr = JSON.parse(sessionStorage.getItem('userData'));
+      if (this.isEmpty(sesionUsr)) {
+        return (<Redirect to={'/'}/>)
+      }
     const { classes } = this.props;
     return (
       <div className={classes.root}>

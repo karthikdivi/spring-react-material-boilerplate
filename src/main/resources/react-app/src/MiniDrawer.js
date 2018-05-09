@@ -16,6 +16,8 @@ import FilterHdrIcon from 'material-ui-icons/FilterHdr';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import { Switch, Route } from 'react-router-dom'
 // Components
+import Signin from './components/Signin';
+import Logout from './components/Logout';
 import Foo from './components/Foo';
 import Users from './components/Users';
 
@@ -147,9 +149,12 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Switch>
-            <Route exact path='/' component={Foo}/>
+            <Route exact path='/' component={Signin}/>
+            <Route exact path='/home' component={Foo}/>
             <Route path='/foo' component={Foo}/>
+            <Route path='/misc' component={Foo}/>
             <Route path='/users' component={Users}/>
+            <Route path='/logout' component={Logout}/>
           </Switch>
         </main>
       </div>

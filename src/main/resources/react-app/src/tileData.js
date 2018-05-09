@@ -46,6 +46,25 @@ export const mailFolderListItems = (
   </div>
 );
 
+function isEmpty(map) {
+  for(var key in map) {
+    if (map.hasOwnProperty(key)) {
+       return false;
+    }
+  }
+  return true;
+}
+
+
+  var logout =(<Link to='/logout' target="_self">
+    <ListItem button>
+    <ListItemIcon>
+    <MailIcon />
+    </ListItemIcon>
+    <ListItemText primary="Logout" />
+  </ListItem>
+  </Link>);
+
 export const otherMailFolderListItems = (
   <div>
   <Link to='/foo' target="_self">
@@ -56,5 +75,8 @@ export const otherMailFolderListItems = (
       <ListItemText primary="Feedback" />
     </ListItem>
     </Link>
+    {logout}
   </div>
 );
+
+
