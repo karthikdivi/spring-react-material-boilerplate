@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom'
 
 export const mailFolderListItems = (
   <div>
-    <Link to='/'>
+    <Link to='/charts'>
       <ListItem button>
         <ListItemIcon>
           <InsertChartIcon />
@@ -67,6 +67,14 @@ export const otherMailFolderListItems = (
         <MailIcon />
       </ListItemIcon>
       <ListItemText primary="Feedback" />
+    </ListItem>
+    </Link>
+    <Link to='/logout' target="_self">
+    <ListItem button>
+      <ListItemIcon>
+        <MailIcon />
+      </ListItemIcon>
+      <ListItemText primary="Logout" />
     </ListItem>
     </Link>
   </div>

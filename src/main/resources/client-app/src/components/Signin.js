@@ -8,6 +8,7 @@ import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import MuiApp from '../MuiApp';
 
 
 const styles = {
@@ -70,8 +71,10 @@ class Signin extends Component {
   
     render() {
       const sesionUsr = JSON.parse(sessionStorage.getItem('userData'));
+      
       if (!this.isEmpty(sesionUsr)) {
-        return (<Redirect to={'/home'}/>)
+        console.log("session user"+ sesionUsr);
+        return (<MuiApp/>);
       }
   
       const responseGoogle = (response) => {

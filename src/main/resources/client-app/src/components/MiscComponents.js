@@ -12,7 +12,6 @@ import Dialog, {
 //import { Typography } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 
-
 const styles = theme => ({
   root: theme.mixins.gutters({
     paddingTop: 16,
