@@ -13,14 +13,16 @@ import MuiApp from '../MuiApp';
 
 const styles = {
     card: {
-      maxWidth: 345,
+      maxWidth: 305,
+      margin: 'auto',
+      "vertical-align" : 'middle',
     },
-    media: {
-      height: 0,
-      paddingTop: '56.25%', // 16:9
+    verticalSpacerDiv: {
+      paddingTop: '10%', // 16:9
     },
     center: {
         verticalAlign: 'middle',
+        margin: 'auto',
     }
   };
   
@@ -87,12 +89,13 @@ class Signin extends Component {
       return (
 
       <div className={classes.center}> 
+      <div className={classes.verticalSpacerDiv}> 
+      </div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            Login with company google account
+          <Typography gutterBottom variant="headline" component="h1">
+            Connect with your Google account
           </Typography>
-
           <GoogleLogin
                 clientId="24810979349-muqhm72u7i5qrrd87mtssgt2hdsmc988.apps.googleusercontent.com"
                 buttonText="Login with Google"
