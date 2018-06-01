@@ -9,7 +9,7 @@ $ npm build
 
 ## Contributors
 
-* [Karthik Divi](https://karthikdivi.com/)
+* [Karthik Divi](https://karthikdivi.com)
 * [Narasing](https://github.com/venkatnpedada)
 
 ## Screenshots
