@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withRoot from './withRoot';
 import MiniDrawer from './MiniDrawer';
 import {Redirect} from 'react-router-dom';
@@ -28,10 +28,10 @@ class MuiApp extends React.Component {
 
   render() {
     const sesionUsr = JSON.parse(sessionStorage.getItem('userData'));
-      if (this.isEmpty(sesionUsr)) {
+      /*if (this.isEmpty(sesionUsr)) {
         console.log("session user in  muiapp"+ sesionUsr);
         return (<Redirect to={'/'}/>)
-      }
+      }*/
     const { classes } = this.props;
     return (
       <div className={classes.root}>
