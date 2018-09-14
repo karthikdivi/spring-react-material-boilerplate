@@ -28,10 +28,10 @@ class MuiApp extends React.Component {
 
   render() {
     const sesionUsr = JSON.parse(sessionStorage.getItem('userData'));
-      /*if (this.isEmpty(sesionUsr)) {
+      if (this.isEmpty(sesionUsr)) {
         console.log("session user in  muiapp"+ sesionUsr);
         return (<Redirect to={'/'}/>)
-      }*/
+      }
     const { classes } = this.props;
     return (
       <div className={classes.root}>
