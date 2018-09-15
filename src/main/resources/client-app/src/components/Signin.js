@@ -4,10 +4,12 @@ import {Redirect} from 'react-router-dom';
 import {PostData} from '../services/PostData';
 
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import MuiApp from '../MuiApp';
 
 
@@ -93,9 +95,9 @@ class Signin extends Component {
       </div>
       <Card className={classes.card}>
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h1">
+        <Typography variant="subheading" gutterBottom>
             Connect with your Google account
-          </Typography>
+        </Typography>
           <GoogleLogin
                 clientId="24810979349-muqhm72u7i5qrrd87mtssgt2hdsmc988.apps.googleusercontent.com"
                 buttonText="Login with Google"

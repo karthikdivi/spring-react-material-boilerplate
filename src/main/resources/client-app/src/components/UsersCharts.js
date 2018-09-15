@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, typography } from 'material-ui/styles';
-import Paper from 'material-ui/Paper';
-import Grid from 'material-ui/Grid';
+import { withStyles, typography } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 import { LineChart, AreaChart, Area, BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Legend, PieChart, Pie, Sector, Cell, Tooltip,
           Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
-import Typography from 'material-ui/Typography';
+import Typography from '@material-ui/core/Typography';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];                   
 const data = [

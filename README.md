@@ -3,13 +3,13 @@ Spring Boot + ReactJS + MaterialUI boilerplate
 
 ## Build 
 ```sh
-$ cd /src/main/resources/react-app
+$ cd ./src/main/resources/react-app
 $ npm build
 ```
 
 ## Contributors
 
-* [Karthik Divi](https://karthikdivi.com/)
+* [Karthik Divi](https://karthikdivi.com)
 * [Narasing](https://github.com/venkatnpedada)
 
 ## Screenshots
