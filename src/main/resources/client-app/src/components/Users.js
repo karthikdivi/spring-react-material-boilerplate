@@ -51,7 +51,7 @@ class Users extends React.Component {
   } 
 
   render() {
-    const { classes } = this.props;
+    //const { classes } = this.props;
     const { rows, columns } = this.state;
     return (
       <Paper>
@@ -61,7 +61,7 @@ class Users extends React.Component {
         >
           <PagingState
             defaultCurrentPage={0}
-            pageSize={15}
+            pageSize={10}
           />
           <IntegratedPaging />
           <FilteringState defaultFilters={[]} />

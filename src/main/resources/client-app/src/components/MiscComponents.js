@@ -3,12 +3,11 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import Dialog, {
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from '@material-ui/core/Dialog';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 //import { Typography } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
@@ -38,7 +37,7 @@ class AlertDialog extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography variant="display1" gutterBottom>
+        <Typography variant="h4" gutterBottom>
         1. Dialogs
         </Typography>
         <Button onClick={this.handleClickOpen}>Open alert dialog</Button>
@@ -64,11 +63,12 @@ class AlertDialog extends React.Component {
             </Button>
           </DialogActions>
         </Dialog>
-        <Typography variant="display1" gutterBottom>
+        <br/><br/><br/>
+        <Typography variant="h4" gutterBottom>
         2. Paper
         </Typography>
         <Paper  className={classes.root} elevation={4}>
-        <Typography variant="headline" component="h3">
+        <Typography variant="h5" component="h3">
           This is a sheet of paper.
         </Typography>
         <Typography component="p">
