@@ -1,5 +1,5 @@
 # spring-react-material-boilerplate
-Spring Boot + ReactJS + MaterialUI boilerplate
+Spring Boot + ReactJS + Redux + MaterialUI boilerplate
 
 ## Build 
 ```sh
@@ -13,9 +13,13 @@ $ npm build
 * [Narasing](https://github.com/venkatnpedada)
 
 ## Screenshots
-#### Charts
-![](images/Screen%20Shot%202018-04-25%20at%202.05.17%20AM.png)
+#### Login
+![](images/login-page.png)
+### Charts
+![](images/app-home.png)
 ### Grid
-![](images/Screen%20Shot%202018-04-25%20at%202.05.56%20AM.png)
+![](images/app-grid.png)
 ### Forms
-![](images/Screen%20Shot%202018-04-25%20at%2011.12.10%20PM.png)
+![](images/app-forms.png)
+### Misc
+![](images/app-misc.png)
