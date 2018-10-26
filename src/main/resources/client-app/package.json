@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "version": "1.0.11",
   "private": true,
   "dependencies": {
     "@devexpress/dx-react-core": "^1.8.0",
