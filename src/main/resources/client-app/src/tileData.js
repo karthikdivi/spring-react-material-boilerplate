@@ -1,20 +1,8 @@
-// This file is shared across the demos.
-
 import React from 'react';
-import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
-import StorageIcon from '@material-ui/icons/Storage';
-import ComputerIcon from '@material-ui/icons/Computer';
-import CloudCircleIcon from '@material-ui/icons/CloudCircle';
-import ListIcon from '@material-ui/icons/List';
-import ShowChartIcon from '@material-ui/icons/ShowChart';
-import CloudDoneIcon from '@material-ui/icons/CloudDone';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import InsertChartIcon from '@material-ui/icons/InsertChart';
@@ -24,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 export const mailFolderListItems = (
   <div>
-    <Link to='/charts'>
+    <Link to='/app/charts'>
       <ListItem button>
         <ListItemIcon>
           <InsertChartIcon />
@@ -32,7 +20,7 @@ export const mailFolderListItems = (
         <ListItemText primary="Charts" />
       </ListItem>
     </Link>
-    <Link to='/grid'>
+    <Link to='/app/grid'>
       <ListItem button>
         <ListItemIcon>
           <GridOnIcon />
@@ -40,7 +28,7 @@ export const mailFolderListItems = (
         <ListItemText primary="Grid" />
       </ListItem>
     </Link>
-    <Link to='/forms'>
+    <Link to='/app/forms'>
       <ListItem button>
         <ListItemIcon>
           <LibraryBooksIcon />
@@ -48,7 +36,7 @@ export const mailFolderListItems = (
         <ListItemText primary="Forms" />
       </ListItem>
     </Link>
-    <Link to='/misc'>
+    <Link to='/app/misc'>
       <ListItem button>
         <ListItemIcon>
           <MoodIcon />
@@ -61,14 +49,16 @@ export const mailFolderListItems = (
 
 export const otherMailFolderListItems = (
   <div>
-  <Link to='/foo' target="_self">
-    <ListItem button>
-      <ListItemIcon>
-        <MailIcon />
-      </ListItemIcon>
-      <ListItemText primary="Feedback" />
-    </ListItem>
-    </Link>
+    {/*
+      <Link to='/foo' target="_self">
+      <ListItem button>
+        <ListItemIcon>
+          <MailIcon />
+        </ListItemIcon>
+        <ListItemText primary="Feedback" />
+      </ListItem>
+      </Link>
+    */}
     <Link to='/logout' target="_self">
     <ListItem button>
       <ListItemIcon>

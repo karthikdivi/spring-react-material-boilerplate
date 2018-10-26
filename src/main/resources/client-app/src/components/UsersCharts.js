@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, typography } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { LineChart, AreaChart, Area, BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Legend, PieChart, Pie, Sector, Cell, Tooltip,
-          Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
+import { LineChart, AreaChart, Area, BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Legend, PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import Typography from '@material-ui/core/Typography';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];                   
@@ -18,6 +17,7 @@ const data = [
   {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
+/*
 const dataRadarChart = [
   { subject: 'Math', A: 120, B: 110, fullMark: 150 },
   { subject: 'Chinese', A: 98, B: 130, fullMark: 150 },
@@ -26,10 +26,7 @@ const dataRadarChart = [
   { subject: 'Physics', A: 85, B: 90, fullMark: 150 },
   { subject: 'History', A: 65, B: 85, fullMark: 150 },
 ];
-
-
-
-
+*/
 
 const styles = theme => ({
   root: {
@@ -43,6 +40,7 @@ const styles = theme => ({
 class UserPieChart extends React.Component {
   render () {
   	return (
+      <ResponsiveContainer aspect={1.8}>
     	<PieChart width={300} height={350}>
         <Pie dataKey="value" data={this.props.data} cx="50%" cy="50%" outerRadius={80} label>
           {
@@ -53,6 +51,7 @@ class UserPieChart extends React.Component {
         </Pie>
         <Tooltip/>
       </PieChart>
+      </ResponsiveContainer>
     );
   }
 }
@@ -60,7 +59,8 @@ class UserPieChart extends React.Component {
 class UserBarChart extends React.Component {
   render () {
   	return (
-    	<BarChart width={400} height={350} data={data}
+      <ResponsiveContainer aspect={1.8}>
+      <BarChart  data={data}
             margin={{top: 20, right: 30, left: 20, bottom: 5}}>
        <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>
@@ -70,6 +70,8 @@ class UserBarChart extends React.Component {
        <Bar dataKey="pv" stackId="a" fill="#8884d8" />
        <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
       </BarChart>
+      </ResponsiveContainer>
+    	
     );
   }
 }
@@ -77,7 +79,8 @@ class UserBarChart extends React.Component {
 class UserStackedAreaChart extends React.Component {
   render () {
   	return (
-    	<AreaChart width={400} height={350} data={data}
+      <ResponsiveContainer aspect={1.8}>
+    	<AreaChart  data={data}
             margin={{top: 10, right: 30, left: 0, bottom: 0}}>
         <CartesianGrid strokeDasharray="3 3"/>
         <XAxis dataKey="name"/>
@@ -87,6 +90,7 @@ class UserStackedAreaChart extends React.Component {
         <Area type='monotone' dataKey='pv' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
         <Area type='monotone' dataKey='amt' stackId="1" stroke='#ffc658' fill='#ffc658' />
       </AreaChart>
+      </ResponsiveContainer>
     );
   }
 }
@@ -94,7 +98,8 @@ class UserStackedAreaChart extends React.Component {
 class UserLineChart extends React.Component {
 	render () {
   	return (
-    	<LineChart width={600} height={450} data={data}
+      <ResponsiveContainer aspect={1.8}>
+    	<LineChart data={data}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>
@@ -105,22 +110,27 @@ class UserLineChart extends React.Component {
        <Line yAxisId="left" type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
        <Line yAxisId="right" type="monotone" dataKey="uv" stroke="#82ca9d" />
       </LineChart>
+      </ResponsiveContainer>
     );
   }
 }
 
+/*
 class UserRadarChart extends React.Component {
   render () {
   	return (
-    	<RadarChart cx={300} cy={250} outerRadius={150} width={600} height={450} data={dataRadarChart}>
+      <ResponsiveContainer aspect={1.8}>
+    	<RadarChart cx={300} cy={250} outerRadius={150}  data={dataRadarChart}>
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis/>
           <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
         </RadarChart>
+        </ResponsiveContainer>
     );
   }
 }
+*/
 
 class UsersCharts extends React.Component {
   state = {
@@ -146,43 +156,35 @@ class UsersCharts extends React.Component {
     return (
       <div className={classes.root}>
       <Grid container spacing={24}>
-      <Grid item xs={12} sm={4}>
+      <Grid item sm={12} md={6} lg={6}>
           <Paper className={classes.paper}>
             <UserBarChart />
-            <Typography variant="subheading" gutterBottom align="center">
+            <Typography variant="subtitle1" gutterBottom align="center">
                 Some Bar Chart
               </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item sm={12} md={6} lg={6}>
           <Paper className={classes.paper} align="center">
               <UserPieChart data={this.state.usersPieChartData} />
-              <Typography variant="subheading" gutterBottom align="center">
+              <Typography variant="subtitle1" gutterBottom align="center">
                 Male vs Female
               </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item sm={12} md={6} lg={6}>
           <Paper className={classes.paper}>
             <UserStackedAreaChart />
-            <Typography variant="subheading" gutterBottom align="center">
+            <Typography variant="subtitle1" gutterBottom align="center">
                 Some Area Chart
               </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item sm={12} md={6} lg={6}>
           <Paper className={classes.paper}>
             <UserLineChart />
-            <Typography variant="subheading" gutterBottom align="center">
+            <Typography variant="subtitle1" gutterBottom align="center">
                 Some Line Chart
-              </Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>
-            <UserRadarChart />
-            <Typography variant="subheading" gutterBottom align="center">
-                Some Radar Chart
               </Typography>
           </Paper>
         </Grid>

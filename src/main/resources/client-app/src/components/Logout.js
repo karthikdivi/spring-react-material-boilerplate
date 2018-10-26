@@ -16,10 +16,6 @@ class Logout extends React.Component {
     render() {
           sessionStorage.userData='{}';
           return (<Redirect to={'/'}/>)
-      
-      return (
-        <div></div>
-      );
     }
   }
   
