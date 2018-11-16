@@ -1,10 +1,9 @@
-import { USER_LANGUAGE_CHANGE, USER_TOGGLE_MAP } from '../actions/types';
+import { USER_LANGUAGE_CHANGE } from '../actions/types';
 
 const initialState = {
     loginTime: new Date(),
     userFoo: [],
-    userLanguage: 'en',
-    showMap: true
+    userLanguage: 'en'
 }
 
 export default function (state = initialState, action) {
@@ -13,11 +12,6 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 userLanguage: action.payload
-            }
-        case USER_TOGGLE_MAP:
-            return {
-                ...state,
-                showMap: !state.showMap
             }
         default:
             return state;

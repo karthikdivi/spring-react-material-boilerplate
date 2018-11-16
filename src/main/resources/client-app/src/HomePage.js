@@ -127,4 +127,4 @@ const mapStateToProps = state => ({
   
 })
 
-export default connect(mapStateToProps, {  })(withStyles(styles)(HomePage));
+export default connect(mapStateToProps, {})(withStyles(styles)(HomePage));

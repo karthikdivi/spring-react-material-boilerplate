@@ -1,4 +1,4 @@
-import { USER_LANGUAGE_CHANGE, USER_TOGGLE_MAP } from './types';
+import { USER_LANGUAGE_CHANGE } from './types';
 
 export const userLanguageCHange = (language) => dispatch => {
     console.log(`userLanguageCHange: language: ${language}`);
