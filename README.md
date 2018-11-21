@@ -3,8 +3,8 @@ Spring Boot + ReactJS + Redux + MaterialUI boilerplate
 
 ## Build 
 ```sh
-$ cd ./src/main/resources/react-app
-$ npm build
+$ cd ./src/main/resources/client-app
+$ npm run-script build
 ```
 
 ## Contributors
